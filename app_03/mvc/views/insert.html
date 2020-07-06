@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta nombre="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Formulario kevin</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        
+    </head>
+        <style>
+            .contenedor{
+                width: 500px;
+                border:solid 2px #000;
+            }
+        </style>
+    <body >
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <div class="container">
+            <div class="contenedor">
+                <img class="img-fluid" src="views/logo.png" alt="">
+            </div>
+            
+            
+                <div class="col-md-7">
+                    <h2 class="display-4">Registro Utec</h2>
+                   
+                    <form>
+                        <div class="row form-group">
+                            <label for="primerapellido" class="text-success col form-label col-md-4">Matricula:</label>
+                            <div class="col-md-8">
+                                <input type="text" nombre="matricula" value="" id="matricula" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="primerapellido" class="text-success col form-label col-md-4">Apellido paterno:</label>
+                            <div class="col-md-8">
+                                <input type="text" nombre="paterno" value="" id="paterno" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="segundoapellido" class="text-success col form-label col-md-4">Apellido materno:</label>
+                            <div class="col-md-8">
+                                <input type="text" nombre="materno" value="" id="materno" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="nombre" class="text-success col form-label col-md-4">Nombre:</label>
+                            <div class="col-md-8">
+                                <input type="text" nombre="nombre" value="" id="nombre" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="edad" class="text-success col form-label col-md-4">Edad:</label>
+                            <div class="col-md-4">
+                                <input type="number" nombre="edad" value="" id="edad" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="nacimiento" class="col form-label col-md-4 text-success" >Dia de nacimiento:</label>
+                            <div class="col-md-6">
+                                <input type="date" nombre="fecha" value="" id="fecha" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label form="" class="col-form-label col-md-4 text-success"> Genero:</label>
+                            <div class="col-md-8 form-check form-check-inline">
+                                <label for="" class="form-check-label">
+                                    <input type="radio" class="form-check-input" nombre="genero">
+                                    Mujer
+                                </label>
+                                <label for="" class="form-check-label">
+                                    <input type="radio" class="form-check-input text-success nombre="genero">
+                                    Hombre
+                                </label>
+                            </div>
+                        </div>
+                        <label for="nacimiento" class="col  col-md-4 text-success" >Estado de residencia:
+                            <div class="col-md-6">
+                                <select>
+                                    <option hidden >Opciones </option>
+                                    <option> Hidalgo </option>
+                                    <option> Puebla </option>
+                                    <option> Guerrerp </option>
+                                    <option> Morelos </option>
+                                    <option> México </option>
+                                    <option> Oaxaca </option>
+                                </select>
+                            </div>
+                        </label>
+                        <button type="submit" class="btn btn-info btn-danger">Finalizar</button>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/list">Volver</a>
+                        </li>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
