@@ -1,12 +1,14 @@
 import web
+from web.template import ALLOWED_AST_NODES
+ALLOWED_AST_NODES.append('Constant')
 
 urls = (
     '/', 'mvc.controllers.index.Index',
-    '/delete', 'mvc.controllers.delete.Delete',
-    '/insert', 'mvc.controllers.insert.Insert',
-    '/update', 'mvc.controllers.update.Update',
-    '/view', 'mvc.controllers.view.View',
-    '/list', 'mvc.controllers.list.List'
+    '/delete', 'mvc.controllers.modulos.delete.Delete',
+    '/insert', 'mvc.controllers.modulos.insert.Insert',
+    '/update', 'mvc.controllers.modulos.update.Update',
+    '/view', 'mvc.controllers.modulos.view.View',
+    '/list', 'mvc.controllers.modulos.list.List'
 
 )
 
