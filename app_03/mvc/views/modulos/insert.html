@@ -21,27 +21,22 @@
                    
                     <form method="POST" action="" novalidate>
                         <div class="row form-group">
-                            <label for="matricula" class="text-success col form-label col-md-4">Matricula:</label>
-                            <div class="col-md-8">
-                            <input type="number" class= "form-control" name="matricula" id="matricula" >
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label for="paterno" class="text-success col form-label col-md-4">Apellido paterno:</label>
-                            <div class="col-md-8">
-                                <input type="text" name="paterno" value="" id="paterno" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label for="materno" class="text-success col form-label col-md-4">Apellido materno:</label>
-                            <div class="col-md-8">
-                                <input type="text" name="materno" value="" id="materno" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row form-group">
                             <label for="nombre" class="text-success col form-label col-md-4">Nombre:</label>
                             <div class="col-md-8">
                                 <input type="text" name="nombre" value="" id="nombre" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <div class="row form-group">
+                            <label for="apellido_p" class="text-success col form-label col-md-4">Apellido paterno:</label>
+                            <div class="col-md-8">
+                                <input type="text" name="apellido_p" value="" id="apellido_p" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="apellido_m" class="text-success col form-label col-md-4">Apellido materno:</label>
+                            <div class="col-md-8">
+                                <input type="text" name="apellido_m" value="" id="apellido_m" class="form-control">
                             </div>
                         </div>
                         <div class="row form-group">
@@ -51,37 +46,24 @@
                             </div>
                         </div>
                         <div class="row form-group">
-                            <label for="fecha" class="col form-label col-md-4 text-success" >Dia de nacimiento:</label>
+                            <label for="fecha_nacimiento" class="col form-label col-md-4 text-success" >Dia de nacimiento:</label>
                             <div class="col-md-6">
-                                <input type="date" name="fecha" value="" id="fecha" class="form-control">
+                                <input type="date" name="fecha_nacimiento" value="" id="fecha_nacimiento" class="form-control">
                             </div>
                         </div>
                         <div class="row form-group">
-                            <label for="genero" class="col-form-label col-md-4 text-success"> Genero:</label>
-                            <div class="col-md-8 form-check form-check-inline">
-                                <label for="genero" class="form-check-label">
-                                    <input type="radio" class="form-check-input" id="genero" name="genero">
-                                    Mujer
-                                </label>
-                                <label for="genero" class="form-check-label">
-                                    <input type="radio" class="form-check-input text-success" id="genero" name="genero">
-                                    Hombre
-                                </label>
+                            <label for="genero" class="col form-label col-md-4 text-success" >Genero:</label>
+                            <div class="col-md-6">
+                                <input name="genero" value="" id="genero" class="form-control">
                             </div>
                         </div>
-                        <label for="estado" class="col  col-md-4 text-success" >Estado de residencia:
+                        <div class="row form-group">
+                            <label for="estado" class="col form-label col-md-4 text-success" >Estado de residencia:</label>
                             <div class="col-md-6">
-                                <select>
-                                    <option hidden >Opciones </option>
-                                    <option> Hidalgo </option>
-                                    <option> Puebla </option>
-                                    <option> Guerrerp </option>
-                                    <option> Morelos </option>
-                                    <option> México </option>
-                                    <option> Oaxaca </option>
-                                </select>
+                                <input name="estado" value="" id="estado" class="form-control">
                             </div>
-                        </label>
+                        </div>
+                        
                         <button type="submit" class="btn btn-info btn-danger">Finalizar</button>
                         <li class="nav-item">
                             <a class="nav-link" href="/list">Volver</a>

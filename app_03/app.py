@@ -7,7 +7,7 @@ urls = (
     '/delete', 'mvc.controllers.modulos.delete.Delete',
     '/insert', 'mvc.controllers.modulos.insert.Insert',
     '/update', 'mvc.controllers.modulos.update.Update',
-    '/view', 'mvc.controllers.modulos.view.View',
+    '/view/(.*)', 'mvc.controllers.modulos.view.View',
     '/list', 'mvc.controllers.modulos.list.List'
 
 )

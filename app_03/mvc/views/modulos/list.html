@@ -60,7 +60,7 @@ $def with(result)
                     $for row in result:
                         <tr>
                             <td>$row['id_persona']</td>
-                            <td>$row['nombre']</td>
+                            <td><a href="/view/$row['id_persona']">$row['nombre']</a></td>
                             <td>$row['apellido_p']</td>
                             <td>$row['apellido_m']</td>
                             <td>$row['edad']</td>
