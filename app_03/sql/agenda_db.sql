@@ -15,8 +15,8 @@ estado VARCHAR(50) NOT NULL
 
 INSERT INTO personas(nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado)
 VALUES 
-('Kevin','Cenobio', 'Hernandez', '20', '200-02-01', 'Masculino', 'Hidalgo'),
-('Kris','Huerta', 'feliciano', '20', '200-02-13', 'Femenino', 'Hidalgo');
+('Kevin','Cenobio', 'Hernandez', '20', '2000-02-01', 'Masculino', 'Hidalgo'),
+('Kris','Huerta', 'feliciano', '20', '2000-02-13', 'Femenino', 'Hidalgo');
 
 CREATE USER IF NOT EXISTS 'user_agend'@'localhost' IDENTIFIED BY 'Agenda.2020';
 

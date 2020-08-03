@@ -65,10 +65,27 @@ class Personas():
             return result
         except Exception as e:
             print(e)
+    
+    def insert(self, nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado):
+        try:
+            self.connect()
+            query = ("INSERT INTO personas (nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado) values (%s,%s,%s,%s,%s,%s,%s);")
+            values = (nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado)
+            self.cursor.execute(query, values)
+            self.cnx.commit()
+            self.cursor.close()
+            self.cnx.close()
+            return True
+        except Exception as e:
+            print(e)
+            return False
+    
+    
+            
             
 
 objeto = Personas()
 objeto.connect()
-
-for row in objeto.view(2):
+#objeto.insert("Fer","Lopez","Gutierres","20","2000-02-01","Masculino","Hidalgo")
+for row in objeto.select():
     print(row)
