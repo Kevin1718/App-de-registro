@@ -66,10 +66,10 @@ class Personas():
         except Exception as e:
             print(e)
     
-    def insert(self, nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado):
+    def insert(selfnombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado):
         try:
             self.connect()
-            query = ("INSERT INTO personas (nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado) values (%s,%s,%s,%s,%s,%s,%s);")
+            query = ("INSERT INTO personas ( nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado) values (%s,%s,%s,%s,%s,%s,%s,%s);")
             values = (nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado)
             self.cursor.execute(query, values)
             self.cnx.commit()
@@ -80,12 +80,21 @@ class Personas():
             print(e)
             return False
     
-    
+    def delete(self, id_persona):
+        try:
+            self.connect()
+            query = ("DELETE FROM personas WHERE id_persona = %s;")
+            values = (id_persona,)
+            self.cursor.execute(query, values)
+            self.cnx.commit()
+            self.cursor.close()
+            self.cnx.close()
+            return True
+        except Exception as e:
+            print(e)
+            return False
             
-            
-
 objeto = Personas()
-objeto.connect()
-#objeto.insert("Fer","Lopez","Gutierres","20","2000-02-01","Masculino","Hidalgo")
+objeto.delete(1)
 for row in objeto.select():
     print(row)

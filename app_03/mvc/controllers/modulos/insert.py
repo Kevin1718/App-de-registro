@@ -23,9 +23,10 @@ class Insert():
             fecha_nacimiento = form.fecha_nacimiento
             genero = form.genero 
             estado = form.estado
-            model_personas.insert(nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado)
+            model_personas.insert( nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado)
             web.seeother('/list')
             print(form)
 
         except Exception as e:
             print(e)
+            print(form)
