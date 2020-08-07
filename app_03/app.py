@@ -4,9 +4,9 @@ ALLOWED_AST_NODES.append('Constant')
 
 urls = (
     '/', 'mvc.controllers.index.Index',
-    '/delete', 'mvc.controllers.modulos.delete.Delete',
+    '/delete/(.*)', 'mvc.controllers.modulos.delete.Delete',
     '/insert', 'mvc.controllers.modulos.insert.Insert',
-    '/update', 'mvc.controllers.modulos.update.Update',
+    '/update/(.*)', 'mvc.controllers.modulos.update.Update',
     '/view/(.*)', 'mvc.controllers.modulos.view.View',
     '/list', 'mvc.controllers.modulos.list.List'
 

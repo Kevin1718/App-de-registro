@@ -1,29 +1,71 @@
+$def with (result)
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LISTA</title>
+        <title>Delete</title>
         <meta charset="utf-8">
         <meta nombre="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     </head>
     <body>
         <h1>
-            Eliminar
+            Delete
         </h1>
-        <h2>Ingrese la matricula del alumno que desea eliminar</h2>
-        <form method="POST" action="" class="form-inline my-2 my-lg-0">
-            <div class="row form-group">
-                <label for="alumn" class="text-success col form-label col-md-4">Alumno:</label>
-                <div class="col-md-8">
-                    <input type="text" name="alumn" value="" id="alumn" class="form-control">
+            <form method="POST" action="" novalidate>
+                <input type="hidden" id="id_persona" name= "id_persona" value="$result['id_persona']">
+                <div class="row form-group">
+                    <label for="nombre" class="text-success col form-label col-md-4">Nombre:</label>
+                    <div class="col-md-8">
+                        <input type="text" readonly name="nombre" value="$result['nombre']" id="nombre" class="form-control">
+                    </div>
                 </div>
-            </div>
-          </form>
-          <div class="form group"></div>
-          <button type="submit" class="btn btn-primary btn-danger">Eliminar</button>
-          <li class="nav-item">
-            <a class="nav-link" href="/list">Volver</a>
-        </li>
+                
+                <div class="row form-group">
+                    <label for="apellido_p" class="text-success col form-label col-md-4">Apellido paterno:</label>
+                    <div class="col-md-8">
+                        <input type="text" readonly name="apellido_p" value="$result['apellido_p']" id="apellido_p" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="apellido_m" class="text-success col form-label col-md-4">Apellido materno:</label>
+                    <div class="col-md-8">
+                        <input type="text" readonly name="apellido_m" value="$result['apellido_m']" id="apellido_m" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="edad" class="text-success col form-label col-md-4">Edad:</label>
+                    <div class="col-md-4">
+                        <input type="number" readonly name="edad" value="$result['edad']" id="edad" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="fecha_nacimiento" class="col form-label col-md-4 text-success" >Dia de nacimiento:</label>
+                    <div class="col-md-6">
+                        <input type="date" readonly name="fecha_nacimiento" value="$result['fecha_nacimiento']" id="fecha_nacimiento" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="genero" class="col form-label col-md-4 text-success" >Genero:</label>
+                    <div class="col-md-6">
+                        <input type="text" readonly name="genero" value="$result['genero']" id="genero" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="estado" class="col form-label col-md-4 text-success" >estado de residencia:</label>
+                    <div class="col-md-6">
+                        <input type="text" readonly name="estado" value="$result['estado']" id="estado" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <button class="btn btn-primary" type="submit">Delete</button>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/list">Cancelar</a>
+                </li>
+                
+        </form>
+           
+            
     </body>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

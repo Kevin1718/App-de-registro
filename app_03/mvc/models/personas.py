@@ -66,10 +66,10 @@ class Personas():
         except Exception as e:
             print(e)
     
-    def insert(selfnombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado):
+    def insert(self, nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado):
         try:
             self.connect()
-            query = ("INSERT INTO personas ( nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado) values (%s,%s,%s,%s,%s,%s,%s,%s);")
+            query = ("INSERT INTO personas ( nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado) values (%s,%s,%s,%s,%s,%s,%s);")
             values = (nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado)
             self.cursor.execute(query, values)
             self.cnx.commit()
@@ -93,8 +93,26 @@ class Personas():
         except Exception as e:
             print(e)
             return False
+    
+    def update(self, id_persona, nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado):
+        try:
+            self.connect()
+            query = ("UPDATE personas SET nombre=%s, apellido_p=%s, apellido_m=%s, edad=%s, fecha_nacimiento=%s, genero=%s, estado=%s WHERE id_persona=%s;")
+            values = (nombre, apellido_p, apellido_m, edad, fecha_nacimiento, genero, estado, id_persona)
+            self.cursor.execute(query, values)
+            self.cnx.commit()
+            self.cursor.close()
+            self.cnx.close()
+            return True
+        except Exception as e:
+            print(e)
+            return False
             
+
 objeto = Personas()
-objeto.delete(1)
+
+#objeto.delete(1)
+#objeto.insert("Fer","Lopez","Gutierres","20","2000-02-01","Masculino","Hidalgo")
+#objeto.update(3, "Armin", "Van", "Buuren", "45", "1998-03-02", "MAsculino", "Amsterdam" )
 for row in objeto.select():
     print(row)
